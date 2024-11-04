@@ -3,6 +3,7 @@ import bcrypt
 
 class UserModel:
     def __init__(self):
+        #definir a tabela no dynamo e criar script para criar usuarios
         self.dynamo = boto3.resource('dynamodb').Table('usuarios_adm')
     
     def create_user(self, username, password):
